@@ -1,0 +1,18 @@
+{
+    "classesPossiveis": [
+        "subordinada",
+        "coordenada",
+        "final"
+    ],
+    "classes": {
+        "subordinada": [
+            "a"
+        ],
+        "coordenada": [
+            "b"
+        ],
+        "final": [
+            "c"
+        ]
+    }
+}
