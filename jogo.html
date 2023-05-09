@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    
     <!-- Navbar -->
     <nav class="navbar">
         <div id="navbar_title">
@@ -21,7 +22,7 @@
                 <a href="/" class="navbar_links"> Sobre </a>
             </li>
             <li class="navbar_btn">
-                <a href="/" class="navbar_links"> Jogar </a>
+                <a href="/jogo.html" class="navbar_links"> Jogar </a>
             </li>
         </ul>
     </div>
@@ -41,19 +42,37 @@
                     </div>
                 </div>
                 <div class="selectors">
-                    <button id="btn">
+                    <!-- Hard coded values for now I guess-->
+                    <button class="btn" id="btn0" onclick="btnMngr(0)">
+                        <div class="btn_content">
+                            Consecutiva
+                        </div>
+                    </button>
+                    <button class="btn" id="btn1" onclick="btnMngr(1)">
+                        <div class="btn_content">
+                            Final
+                        </div>
+                    </button>
+                    <button class="btn" id="btn2" onclick="btnMngr(2)">
                         <div class="btn_content">
                             Temporal
                         </div>
                     </button>
-                    <button id="btn">
+                    <button class="btn" id="btn3" onclick="btnMngr(3)">
                         <div class="btn_content">
                             Proporcional
                         </div>
                     </button>
-                    <button id="btn">
+                    <button class="btn" id="btn4" onclick="btnMngr(4)">
                         <div class="btn_content">
-                            Final
+                            Integrante
+                        </div>
+                    </button>
+                </div>
+                <div class="submit">
+                    <button class="btn_sbmt" id="btnSubmit">
+                        <div class="btn_content">
+                            Responder
                         </div>
                     </button>
                 </div>
@@ -61,5 +80,5 @@
         </div>
     </div>
     <script src="game.js"></script>
-  </body>
+    </body>
 </html>
