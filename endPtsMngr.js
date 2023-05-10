@@ -7,6 +7,7 @@
 'use strict';
 
 const points = localStorage.getItem('points');
-console.log(points)
 
 document.getElementById('results').innerHTML = `${points} / 6 PONTOS`;
+
+localStorage.clear(); // Just safety to prevent exploiting I guess?
