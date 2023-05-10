@@ -33,27 +33,52 @@ const data = {
         ],
         "final": [
             "João foi à academia <span class=highlight_text>a fim de</span> ficar forte.",
-            "Apertei o ferimento <span class=highlight_text>a fim </span>de que parasse de sangrar."
+            "Apertei o ferimento <span class=highlight_text>a fim de</span> que parasse de sangrar.",
+            "É tarde <span class=highlight_text>para que</span> reverta o estrago",
+            "Ele trabalha - a fim de que- ganhe seu salário."
         ],
         "temporal": [
-            "TEMPORAL"
+            "Desaprovou o comportamento do filho <span class=highlight_text>assim que</span> soube do ocorrido.",
+            "<span class=highlight_text>Apenas</span>  pegou o casaco e saiu a correr pela rua fria."
         ],
         "proporcional": [
-            "PROPORCIONAL"
+            "Não gostava da sogra, <span class=highlight_text>quanto mais</span> da cunhada.",
+            "- À medida que - andávamos, ficava mais escuro.",
+            "- Quanto mais estudo, mais - preparada fico para a prova."
         ],
         "integrante": [
-            "INTEGRANTE"
+            "Afirmo - que - sou a proprietária da loja.",
+            "Não sabia - se - contava o ocorrido ou me calava.",
+            "Tive receio, percebi - que - tinha cometido um erro"
         ]
     }
 }
+
+
+function clearLocal(){
+    localStorage.clear();
+}
+
+// Random generation for question answer and prompt
+
+// -----------
+// Explanation: Gets a random number, selects a class with that number, selects a class in randomObj and then
+// chooses a random entry in that randomObj array with the randomObjNumber variable.
+// -----------
+
 let randomNumber = Math.floor((Math.random() * data.classesPossiveis.length));
-document.getElementById('prompt').innerHTML = data.classes[data.classesPossiveis[randomNumber]];
+let randomObj = data.classes[data.classesPossiveis[randomNumber]];
+let randomObjNumber = Math.floor((Math.random() * randomObj.length));
+document.getElementById('prompt').innerHTML = randomObj[randomObjNumber];
+
 function updateRandom() {
     randomNumber = Math.floor((Math.random() * data.classesPossiveis.length));
-    document.getElementById('prompt').innerHTML = data.classes[data.classesPossiveis[randomNumber]];
+    randomObj = data.classes[data.classesPossiveis[randomNumber]]
+    randomObjNumber = Math.floor((Math.random() * randomObj.length));
+    console.log(randomObj)
+    document.getElementById('prompt').innerHTML = randomObj[randomObjNumber];
 }
 // Button Manager
-// SHOULD REFACTOR THIS SUCKS
 
 function btnMngr(id) {
     btnId = id;
@@ -78,10 +103,7 @@ function gameManager(btnId, randomNumber) {
     }
     // Evaluate Win
 
-    //console.log("INDEX: " + data.classesPossiveis[data.classesPossiveis.indexOf(data.classesPossiveis[randomNumber])])
-    // Evaluate Win
-
-    console.log("INDEX: " + data.classesPossiveis[data.classesPossiveis.indexOf(data.classesPossiveis[randomNumber])])
+    // console.log("INDEX: " + data.classesPossiveis[data.classesPossiveis.indexOf(data.classesPossiveis[randomNumber])])
 
     if (btnId == data.classesPossiveis.indexOf(data.classesPossiveis[randomNumber])) {
         points++;
@@ -93,10 +115,8 @@ function gameManager(btnId, randomNumber) {
         document.getElementById(`btn${i}`).className ='btn';
     }
 
-    
-    
     currentRound++;
-    console.log("ROUND: " + currentRound);
+    // console.log("ROUND: " + currentRound);
     
     if (currentRound >= maxRound) {
         localStorage.setItem("points", points);
