@@ -12,8 +12,8 @@ let currentRound = 0;
 let maxRound = parseInt(localStorage.getItem('rounds')); // localStorage only stores strings!
 let points = 0;
 let btnId = 1000;
-let correctSound = new Audio('/win.wav');
-let incorrectSound = new Audio('/lose.wav');
+let correctSound = new Audio('win.wav');
+let incorrectSound = new Audio('lose.wav');
 
 
 // T H E  J S O N
