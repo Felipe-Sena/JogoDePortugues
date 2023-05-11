@@ -15,5 +15,5 @@ function run() {
         // Use user inputted values
         localStorage.setItem('rounds', inputValue.value);
     }
-    window.location.href='/jogo.html';
+    window.location.href='jogo.html';
 }

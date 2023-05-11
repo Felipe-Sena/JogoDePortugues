@@ -190,7 +190,7 @@ function gameManager(btnId, randomNumber) {
     if (currentRound >= maxRound) {
         localStorage.setItem("points", points);
         console.log(localStorage.getItem("points"));
-        window.location.href="./gameEnd.html";
+        window.location.href="gameEnd.html";
     }
 }
 
