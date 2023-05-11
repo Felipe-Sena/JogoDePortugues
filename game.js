@@ -87,7 +87,7 @@ const data = {
             "Não gostava da sogra, <span class=highlight_text>quanto mais</span> da cunhada.",
             "<span class=highlight_text>À medida que</span> andávamos, ficava mais escuro.",
             "<span class=highlight_text>Quanto mais estudo, mais</span> preparada fico para a prova.",
-            "Parece até que, <span class=highlight_text>quanto menos você sabe, <span class=highlight_text>menos você sofre.",
+            "Parece até que, <span class=highlight_text>quanto menos</span> você sabe, <span class=highlight_text>menos</span> você sofre.",
             "<span class=highlight_text>À medida que</span> nos aproximávamos, o lugar ficava <span class=highlight_text>mais</span> encantador!",
             "<span class=highlight_text>À medida em que</span> o tempo passava, confortava-se.",
             "<span class=highlight_text>Quanto mais</span> esperava, <span class=highlight_text>menos</span> satisfeita ficava.",
